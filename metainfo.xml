@@ -1,0 +1,15 @@
+<Extension>
+
+	<name>advancedcomponent</name>
+	<version>0.1</version>
+	<title>高级组件</title>
+	
+ 
+	<class>org.opencomb.advcmpnt.Advancedcomponent</class>
+	<package folder="/class" namespace="org.opencomb.advcmpnt" />
+ 
+	<template folder="/template" />
+	
+	<publicFolder folder="/public" />
+	
+</Extension>

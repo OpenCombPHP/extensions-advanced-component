@@ -5,7 +5,7 @@
 	<title>高级组件</title>
 	
  
-	<class>org.opencomb.advcmpnt.Advancedcomponent</class>
+	<class>org.opencomb.advcmpnt.AdvancedComponent</class>
 	<package folder="/class" namespace="org.opencomb.advcmpnt" />
  
 	<template folder="/template" />

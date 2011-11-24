@@ -1,7 +1,7 @@
 <?php 
 namespace org\opencomb\advcmpnt ;
 
-use oc\ext\Extension ;
+use org\opencomb\ext\Extension ;
 
 class AdvancedComponent extends Extension 
 {

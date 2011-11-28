@@ -2,7 +2,6 @@
 namespace org\opencomb\advcmpnt ;
 
 use org\opencomb\advcmpnt\lib\LibManager;
-
 use org\jecat\framework\ui\xhtml\parsers\ParserStateTag;
 use org\jecat\framework\ui\CompilerManager;
 use org\opencomb\ext\Extension ;

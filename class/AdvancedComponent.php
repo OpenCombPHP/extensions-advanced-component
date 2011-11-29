@@ -14,15 +14,15 @@ class AdvancedComponent extends Extension
 	 * 载入扩展
 	 */
 	public function load()
-	{
-		$this->registerLibNode() ;
-	}
+	{}
 	
 	/**
 	 * 载入扩展
 	 */
 	public function active()
 	{
+		$this->registerLibNode() ;
+		
 		// jquery
 		LibManager::singleton()->registerLibrary('jquery','1.7.1','advancedcomponent:jquery-1.7.1.js',null,null,true) ;
 		
@@ -51,10 +51,16 @@ class AdvancedComponent extends Extension
 	}
 	
 	private function registerLibNode()
-	{
+	{		
 		ParserStateTag::singleton()->addTagNames('lib') ;
+		echo UIFactory::singleton()->sourceFileManager()->compileStrategySignture()," " ;
 		
 		UIFactory::singleton()->compilerManager()->compilerByName('org\\jecat\\framework\\ui\xhtml\\Node')->setSubCompiler('lib',__NAMESPACE__.'\\lib\\LibCompiler') ;
 		MvcUIFactory::singleton()->compilerManager()->compilerByName('org\\jecat\\framework\\ui\xhtml\\Node')->setSubCompiler('lib',__NAMESPACE__.'\\lib\\LibCompiler') ;
+		
+		// 重新计算 ui 的编译策略签名
+		UIFactory::singleton()->calculateCompileStrategySignture() ;
+		MvcUIFactory::singleton()->calculateCompileStrategySignture() ;
+		echo UIFactory::singleton()->sourceFileManager()->compileStrategySignture() ;
 	}
 }

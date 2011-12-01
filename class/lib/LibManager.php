@@ -1,6 +1,8 @@
 <?php
 namespace org\opencomb\advcmpnt\lib ;
 
+use org\jecat\framework\resrc\HtmlResourcePool;
+
 use org\jecat\framework\system\Application;
 
 use org\jecat\framework\ui\SourceFileManager;
@@ -54,7 +56,26 @@ class LibManager extends Object
 		$aFileIter->append(new \ArrayIterator($this->arrLibraries[$sName]['*'][$sFileType])) ;
 		
 		return $aFileIter ;
-	}	
+	}
+	
+	public function loadLibrary($sName,$sVersion='*',HtmlResourcePool $aHtmlResrcPool=null)
+	{
+		if(!$aHtmlResrcPool)
+		{
+			$aHtmlResrcPool = HtmlResourcePool::singleton() ;
+		}
+		
+		// 载入 js 文件
+		foreach($this->libraryFileIterator('js',$sName,$sVersion) as $sFile)
+		{
+			$aHtmlResrcPool->addRequire($sFile,\org\jecat\framework\resrc\HtmlResourcePool::RESRC_JS) ;
+		}
+		// 载入 css 文件
+		foreach($this->libraryFileIterator('css',$sName,$sVersion) as $sFile)
+		{
+			$aHtmlResrcPool->addRequire($sFile,\org\jecat\framework\resrc\HtmlResourcePool::RESRC_JS) ;
+		}
+	}
 	
 	private $arrLibraries = array() ;
 }

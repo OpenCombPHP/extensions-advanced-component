@@ -73,7 +73,7 @@ class LibManager extends Object
 		// 载入 css 文件
 		foreach($this->libraryFileIterator('css',$sName,$sVersion) as $sFile)
 		{
-			$aHtmlResrcPool->addRequire($sFile,\org\jecat\framework\resrc\HtmlResourcePool::RESRC_JS) ;
+			$aHtmlResrcPool->addRequire($sFile,\org\jecat\framework\resrc\HtmlResourcePool::RESRC_CSS) ;
 		}
 	}
 	

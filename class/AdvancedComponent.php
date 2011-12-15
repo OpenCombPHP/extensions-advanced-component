@@ -4,7 +4,7 @@ namespace org\opencomb\advcmpnt ;
 use org\opencomb\advcmpnt\lib\LibManager;
 use org\jecat\framework\ui\xhtml\parsers\ParserStateTag;
 use org\jecat\framework\ui\CompilerManager;
-use org\opencomb\ext\Extension ;
+use org\opencomb\platform\ext\Extension ;
 use org\jecat\framework\ui\xhtml\UIFactory ;
 use org\jecat\framework\mvc\view\UIFactory as MvcUIFactory ;
 

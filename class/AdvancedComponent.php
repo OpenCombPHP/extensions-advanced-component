@@ -48,6 +48,30 @@ class AdvancedComponent extends Extension
 				)
 				, array('jquery.ui'), true
 		) ;
+		
+		// jquery.cookie
+		LibManager::singleton()->registerLibrary('jquery.cookie','1.7.1'
+				// js
+				, array(
+					'advancedcomponent:jquery.cookie-1.7.1.js' ,
+				)
+				// css
+				, array(
+				)
+				, array('jquery'), true
+		) ;
+		
+		// jquery.progressbar
+		LibManager::singleton()->registerLibrary('jquery.progressbar','*'
+				// js
+				, array(
+					'advancedcomponent:jquery.progressbar.min.js' ,
+				)
+				// css
+				, array(
+				)
+				, array('jquery'), true
+		) ;
 	}
 	
 	private function registerLibNode()

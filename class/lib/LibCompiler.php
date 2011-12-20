@@ -19,12 +19,18 @@ class LibCompiler extends NodeCompiler
 			throw new Exception("lib 标签缺少 name 树形") ;
 		}
 		
-		foreach(LibManager::singleton()->libraryFileIterator('js','jquery.treeview') as $sFile)
+		if( $aObject->attributes()->has('version') ){
+			$sLibVersion = $aObject->attributes()->string('version') ;
+		}else{
+			$sLibVersion = '*';
+		}
+		
+		foreach(LibManager::singleton()->libraryFileIterator('js',$sLibName,$sLibVersion) as $sFile)
 		{
 			$sFile = addslashes($sFile) ;
 			$aDev->write("\\org\\jecat\\framework\\resrc\\HtmlResourcePool::singleton()->addRequire(\"{$sFile}\",\\org\\jecat\\framework\\resrc\\HtmlResourcePool::RESRC_JS) ;") ;
 		}
-		foreach(LibManager::singleton()->libraryFileIterator('css','jquery.treeview') as $sFile)
+		foreach(LibManager::singleton()->libraryFileIterator('css',$sLibName,$sLibVersion) as $sFile)
 		{
 			$sFile = addslashes($sFile) ;
 			$aDev->write("\\org\\jecat\\framework\\resrc\\HtmlResourcePool::singleton()->addRequire(\"{$sFile}\",\\org\\jecat\\framework\\resrc\\HtmlResourcePool::RESRC_CSS) ;") ;

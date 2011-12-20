@@ -48,6 +48,21 @@ class AdvancedComponent extends Extension
 				)
 				, array('jquery.ui'), true
 		) ;
+		
+		// jquery.ztree
+		LibManager::singleton()->registerLibrary('jquery.ztree','3.0'
+				// js
+				, array(
+						'advancedcomponent:jquery.ztree/jquery.ztree.core-3.0.min.js' ,
+						'advancedcomponent:jquery.ztree/jquery.ztree.excheck-3.0.min.js' ,
+						'advancedcomponent:jquery.ztree/jquery.ztree.exedit-3.0.min.js' ,
+				)
+				// css
+				, array(
+						'advancedcomponent:jquery.ztree/zTreeStyle/zTreeStyle.css' ,
+				)
+				, array('jquery'), true
+		) ;
 	}
 	
 	private function registerLibNode()

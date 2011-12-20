@@ -59,7 +59,6 @@ class AdvancedComponent extends Extension
 				)
 				// css
 				, array(
-						'advancedcomponent:jquery.ztree/css/xxx.css' ,
 						'advancedcomponent:jquery.ztree/css/zTreeStyle/zTreeStyle.css' ,
 				)
 				, array('jquery'), true

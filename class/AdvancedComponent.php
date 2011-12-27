@@ -87,6 +87,26 @@ class AdvancedComponent extends Extension
 				)
 				, array('jquery'), true
 		) ;
+		// jquery.beautyOfCode
+		LibManager::singleton()->registerLibrary('jquery.beautyOfCode','*'
+			// js
+			, array(
+				'advancedcomponent:shCore.js' ,
+				'advancedcomponent:jquery.beautyOfCode-min.js' ,
+				'advancedcomponent:shBrushCSharp.js' ,
+				'advancedcomponent:shBrushJScript.js' ,
+				'advancedcomponent:shBrushPhp.js' ,
+				'advancedcomponent:shBrushPlain.js' ,
+				'advancedcomponent:shBrushSql.js' ,
+				'advancedcomponent:shBrushXml.js' ,
+			)
+			// css
+			, array(
+				'advancedcomponent:jquery.beautyOfCode/style/shCore.css' ,
+				'advancedcomponent:jquery.beautyOfCode/style/shThemeDefault.css' ,
+			)
+			, array('jquery'), true
+		) ;
 	}
 	
 	private function registerLibNode()

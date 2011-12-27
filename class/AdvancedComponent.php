@@ -87,23 +87,23 @@ class AdvancedComponent extends Extension
 				)
 				, array('jquery'), true
 		) ;
-		// jquery.beautyOfCode
-		LibManager::singleton()->registerLibrary('jquery.beautyOfCode','*'
+		// jquery.beautyofcode
+		LibManager::singleton()->registerLibrary('jquery.beautyofcode','0.2'
 			// js
 			, array(
-				'advancedcomponent:jquery.beautyOfCode/shCore.js' ,
-				'advancedcomponent:jquery.beautyOfCode/jquery.beautyOfCode-min.js' ,
-				'advancedcomponent:jquery.beautyOfCode/shBrushCSharp.js' ,
-				'advancedcomponent:jquery.beautyOfCode/shBrushJScript.js' ,
-				'advancedcomponent:jquery.beautyOfCode/shBrushPhp.js' ,
-				'advancedcomponent:jquery.beautyOfCode/shBrushPlain.js' ,
-				'advancedcomponent:jquery.beautyOfCode/shBrushSql.js' ,
-				'advancedcomponent:jquery.beautyOfCode/shBrushXml.js' ,
+				'advancedcomponent:jquery.beautyofcode/shCore.js' ,
+				'advancedcomponent:jquery.beautyofcode/jquery.beautyOfCode-min.js' ,
+				'advancedcomponent:jquery.beautyofcode/shBrushCSharp.js' ,
+				'advancedcomponent:jquery.beautyofcode/shBrushJScript.js' ,
+				'advancedcomponent:jquery.beautyofcode/shBrushPhp.js' ,
+				'advancedcomponent:jquery.beautyofcode/shBrushPlain.js' ,
+				'advancedcomponent:jquery.beautyofcode/shBrushSql.js' ,
+				'advancedcomponent:jquery.beautyofcode/shBrushXml.js' ,
 			)
 			// css
 			, array(
-				'advancedcomponent:jquery.beautyOfCode/style/shCore.css' ,
-				'advancedcomponent:jquery.beautyOfCode/style/shThemeDefault.css' ,
+				'advancedcomponent:jquery.beautyofcode/style/shCore.css' ,
+				'advancedcomponent:jquery.beautyofcode/style/shThemeDefault.css' ,
 			)
 			, array('jquery'), true
 		) ;

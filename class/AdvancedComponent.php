@@ -91,14 +91,14 @@ class AdvancedComponent extends Extension
 		LibManager::singleton()->registerLibrary('jquery.beautyOfCode','*'
 			// js
 			, array(
-				'advancedcomponent:shCore.js' ,
-				'advancedcomponent:jquery.beautyOfCode-min.js' ,
-				'advancedcomponent:shBrushCSharp.js' ,
-				'advancedcomponent:shBrushJScript.js' ,
-				'advancedcomponent:shBrushPhp.js' ,
-				'advancedcomponent:shBrushPlain.js' ,
-				'advancedcomponent:shBrushSql.js' ,
-				'advancedcomponent:shBrushXml.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shCore.js' ,
+				'advancedcomponent:jquery.beautyOfCode/jquery.beautyOfCode-min.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shBrushCSharp.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shBrushJScript.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shBrushPhp.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shBrushPlain.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shBrushSql.js' ,
+				'advancedcomponent:jquery.beautyOfCode/shBrushXml.js' ,
 			)
 			// css
 			, array(

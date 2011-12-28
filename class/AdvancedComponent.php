@@ -88,24 +88,20 @@ class AdvancedComponent extends Extension
 				, array('jquery'), true
 		) ;
 		// jquery.beautyofcode
-		LibManager::singleton()->registerLibrary('jquery.beautyofcode','0.2'
+		LibManager::singleton()->registerLibrary('syntaxhighlighter','3.0.83'
 			// js
 			, array(
-				'advancedcomponent:jquery.beautyofcode/shCore.js' ,
-				'advancedcomponent:jquery.beautyofcode/jquery.beautyOfCode-min.js' ,
-				'advancedcomponent:jquery.beautyofcode/shBrushCSharp.js' ,
-				'advancedcomponent:jquery.beautyofcode/shBrushJScript.js' ,
-				'advancedcomponent:jquery.beautyofcode/shBrushPhp.js' ,
-				'advancedcomponent:jquery.beautyofcode/shBrushPlain.js' ,
-				'advancedcomponent:jquery.beautyofcode/shBrushSql.js' ,
-				'advancedcomponent:jquery.beautyofcode/shBrushXml.js' ,
+				'advancedcomponent:syntaxhighlighter/scripts/shCore.js' ,
+				'advancedcomponent:syntaxhighlighter/scripts/shBrushJScript.js' ,
+				'advancedcomponent:syntaxhighlighter/scripts/shAutoloader.js' ,
+				'advancedcomponent:syntaxhighlighter/scripts/shBrushXml.js' ,
+				'advancedcomponent:syntaxhighlighter/scripts/shInit.js' ,
 			)
 			// css
 			, array(
-				'advancedcomponent:jquery.beautyofcode/style/shCore.css' ,
-				'advancedcomponent:jquery.beautyofcode/style/shThemeDefault.css' ,
+				'advancedcomponent:syntaxhighlighter/styles/shCoreDefault.css' ,
 			)
-			, array('jquery'), true
+			, 'jquery' , true
 		) ;
 	}
 	

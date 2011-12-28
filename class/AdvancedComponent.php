@@ -87,21 +87,133 @@ class AdvancedComponent extends Extension
 				)
 				, array('jquery'), true
 		) ;
-		// jquery.beautyofcode
+		// syntaxhighlighter
 		LibManager::singleton()->registerLibrary('syntaxhighlighter','3.0.83'
 			// js
 			, array(
 				'advancedcomponent:syntaxhighlighter/scripts/shCore.js' ,
-				'advancedcomponent:syntaxhighlighter/scripts/shBrushJScript.js' ,
-				'advancedcomponent:syntaxhighlighter/scripts/shAutoloader.js' ,
-				'advancedcomponent:syntaxhighlighter/scripts/shBrushXml.js' ,
-				'advancedcomponent:syntaxhighlighter/scripts/shInit.js' ,
+ 				'advancedcomponent:syntaxhighlighter/scripts/shBrushJScript.js' ,
+// 				'advancedcomponent:syntaxhighlighter/scripts/shAutoloader.js' ,
+// 				'advancedcomponent:syntaxhighlighter/scripts/shBrushXml.js' ,
+// 				'advancedcomponent:syntaxhighlighter/scripts/shInit.js' ,
 			)
 			// css
 			, array(
 				'advancedcomponent:syntaxhighlighter/styles/shCoreDefault.css' ,
 			)
-			, 'jquery' , true
+			, null , true
+		) ;
+		// syntaxhighlighter:js
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:js','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushJScript.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:css
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:css','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushCss.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:cpp
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:cpp','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushCpp.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:as3
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:as3','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushAS3.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:bash
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:bash','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushBash.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:delphi
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:delphi','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushDelphi.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:groovy
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:groovy','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushGroovy.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:java
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:java','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushJava.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:perl
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:perl','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushPerl.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:php
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:php','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushPhp.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:python
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:python','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushPython.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:ruby
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:ruby','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushRuby.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:scala
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:scala','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushScala.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:sql
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:sql','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushSql.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:xml
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:xml','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushXml.js' )
+				, array()
+				, 'syntaxhighlighter' , true
+		) ;
+		// syntaxhighlighter:vb
+		LibManager::singleton()->registerLibrary('syntaxhighlighter:vb','3.0.83'
+				// js
+				, array('advancedcomponent:syntaxhighlighter/scripts/shBrushVb.js' )
+				, array()
+				, 'syntaxhighlighter' , true
 		) ;
 	}
 	

@@ -1,6 +1,7 @@
 <?php 
 namespace org\opencomb\advcmpnt ;
 
+use org\jecat\framework\bean\BeanFactory;
 use org\opencomb\advcmpnt\lib\LibManager;
 use org\jecat\framework\ui\xhtml\parsers\ParserStateTag;
 use org\jecat\framework\ui\CompilerManager;
@@ -14,7 +15,10 @@ class AdvancedComponent extends Extension
 	 * 载入扩展
 	 */
 	public function load()
-	{}
+	{
+		//添加扩展提供的控件
+		BeanFactory::singleton()->registerBeanClass("org\\opencomb\\advcmpnt\\widget\\RichText",'richText') ;
+	}
 	
 	/**
 	 * 载入扩展
@@ -215,6 +219,7 @@ class AdvancedComponent extends Extension
 				, array()
 				, 'syntaxhighlighter' , true
 		) ;
+		
 		// ckeditor
 		LibManager::singleton()->registerLibrary('ckeditor','3.6.2'
 				// js

@@ -215,6 +215,13 @@ class AdvancedComponent extends Extension
 				, array()
 				, 'syntaxhighlighter' , true
 		) ;
+		// ckeditor
+		LibManager::singleton()->registerLibrary('ckeditor','3.6.2'
+				// js
+				, array('advancedcomponent:ckeditor/ckeditor.js' )
+				, array()
+				, null , true
+		) ;
 	}
 	
 	private function registerLibNode()

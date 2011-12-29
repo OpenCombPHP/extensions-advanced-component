@@ -1,0 +1,7 @@
+<lib name='ckeditor' />
+<textarea id="{=$theWidget->id()}" name="{=$theWidget->formName()}" {= $theWidget->isReadOnly() ? 'readonly="readonly"' : ''}  {= $theWidget->isDisabled() ? 'disabled="disabled"' : ''} {=$theWidget->displayInputAttributes()} >{=$theWidget->valueToString()}</textarea>
+<script type='text/javascript'>
+CKEDITOR.replace( '{=$theWidget->id()}',{
+	{=$theWidget->hasSpecifiedConfiguration() ? $theWidget->configuration() : ""}
+});
+</script>

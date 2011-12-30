@@ -59,7 +59,7 @@ class AdvancedComponent extends Extension
 				, array(
 						'advancedcomponent:jquery.ztree/jquery.ztree.core-3.0.min.js' ,
 						'advancedcomponent:jquery.ztree/jquery.ztree.excheck-3.0.min.js' ,
-						'advancedcomponent:jquery.ztree/jquery.ztree.exedit-3.0.min.js' ,
+// 						'advancedcomponent:jquery.ztree/jquery.ztree.exedit-3.0.min.js' ,
 				)
 				// css
 				, array(

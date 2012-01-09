@@ -2,9 +2,7 @@
 namespace org\opencomb\advcmpnt\lib ;
 
 use org\jecat\framework\resrc\HtmlResourcePool;
-
 use org\jecat\framework\system\Application;
-
 use org\jecat\framework\ui\SourceFileManager;
 use org\jecat\framework\pattern\iterate\ArrayIterator;
 use org\jecat\framework\lang\Object;

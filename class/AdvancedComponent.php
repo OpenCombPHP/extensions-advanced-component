@@ -57,7 +57,7 @@ class AdvancedComponent extends Extension
 				, array(
 						'advancedcomponent:jquery.ztree/jquery.ztree.core-3.0.min.js' ,
 						'advancedcomponent:jquery.ztree/jquery.ztree.excheck-3.0.min.js' ,
-// 						'advancedcomponent:jquery.ztree/jquery.ztree.exedit-3.0.min.js' ,
+						'advancedcomponent:jquery.ztree/jquery.ztree.exedit-3.0.min.js' ,
 				)
 				// css
 				, array(
@@ -224,6 +224,13 @@ class AdvancedComponent extends Extension
 				, array('advancedcomponent:ckeditor/ckeditor.js' )
 				, array()
 				, null , true
+		) ;
+		// jquery.threedots
+		LibManager::singleton()->registerLibrary('threedots','1.0.10'
+				// js
+				, array('advancedcomponent:jquery.threedots/jquery.ThreeDots.min.js' )
+				, array()
+				, 'jquery' , true
 		) ;
 		
 		// --------------------------

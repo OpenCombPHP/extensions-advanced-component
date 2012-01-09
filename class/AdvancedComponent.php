@@ -226,7 +226,7 @@ class AdvancedComponent extends Extension
 				, null , true
 		) ;
 		// jquery.threedots
-		LibManager::singleton()->registerLibrary('threedots','1.0.10'
+		LibManager::singleton()->registerLibrary('jquery.threedots','1.0.10'
 				// js
 				, array('advancedcomponent:jquery.threedots/jquery.ThreeDots.min.js' )
 				, array()

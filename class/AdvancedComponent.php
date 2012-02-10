@@ -35,6 +35,13 @@ class AdvancedComponent extends Extension
 				, 'jquery', true
 		) ;
 		
+		// jquery.ui.menu
+		LibManager::singleton()->registerLibrary('jquery.ui.menu','*'
+				, 'advancedcomponent:jquery.ui.menu/fg.menu.js'
+				, 'advancedcomponent:jquery.ui.menu/fg.menu.css'
+				, array('jquery.ui'), true
+		) ;
+		
 		// jquery.treeview
 		LibManager::singleton()->registerLibrary('jquery.treeview','*'
 				// js

@@ -4,7 +4,7 @@ namespace org\opencomb\advcmpnt ;
 use org\opencomb\platform\system\PlatformSerializer;
 
 use org\jecat\framework\bean\BeanFactory;
-use org\opencomb\advcmpnt\lib\LibManager;
+use org\opencomb\coresystem\lib\LibManager;
 use org\jecat\framework\ui\xhtml\parsers\ParserStateTag;
 use org\jecat\framework\ui\CompilerManager;
 use org\opencomb\platform\ext\Extension ;
@@ -24,16 +24,6 @@ class AdvancedComponent extends Extension
 		
 		/////////////////////////////////////////////////////////////////////////
 		// 注册前端库
-
-		// jquery
-		LibManager::singleton()->registerLibrary('jquery','1.7.1','advancedcomponent:jquery-1.7.1.js',null,null,true) ;
-		
-		// jquery.ui
-		LibManager::singleton()->registerLibrary('jquery.ui','1.8.16'
-				, 'advancedcomponent:jquery.ui/jquery-ui-1.8.16.full.min.js'
-				, 'advancedcomponent:jquery.ui/jquery-ui-1.8.16.full.css'
-				, 'jquery', true
-		) ;
 		
 		// jquery.ui.menu
 		LibManager::singleton()->registerLibrary('jquery.ui.menu','*'
@@ -83,17 +73,6 @@ class AdvancedComponent extends Extension
 				, array('jquery'), true
 		) ;
 		
-		// jquery.progressbar
-		LibManager::singleton()->registerLibrary('jquery.progressbar','*'
-				// js
-				, array(
-					'advancedcomponent:jquery.progressbar.min.js' ,
-				)
-				// css
-				, array(
-				)
-				, array('jquery'), true
-		) ;
 		// syntaxhighlighter
 		LibManager::singleton()->registerLibrary('syntaxhighlighter','3.0.83'
 			// js
@@ -245,18 +224,5 @@ class AdvancedComponent extends Extension
 	
 	public function active()
 	{
-		$this->registerLibNode() ;
-	}
-	
-	private function registerLibNode()
-	{
-		ParserStateTag::singleton()->addTagNames('lib') ;
-
-		UIFactory::singleton()->compilerManager()->compilerByName('org\\jecat\\framework\\ui\xhtml\\Node')->setSubCompiler('lib',__NAMESPACE__.'\\lib\\LibCompiler') ;
-		MvcUIFactory::singleton()->compilerManager()->compilerByName('org\\jecat\\framework\\ui\xhtml\\Node')->setSubCompiler('lib',__NAMESPACE__.'\\lib\\LibCompiler') ;
-		
-		// 重新计算 ui 的编译策略签名
-		UIFactory::singleton()->calculateCompileStrategySignture() ;
-		MvcUIFactory::singleton()->calculateCompileStrategySignture() ;
 	}
 }

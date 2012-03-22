@@ -216,10 +216,6 @@ class AdvancedComponent extends Extension
 				, array()
 				, 'jquery' , true
 		) ;
-		
-		// --------------------------
-		// 提供给系统序列化
-		PlatformSerializer::singleton()->addSystemObject(LibManager::singleton()) ;
 	}
 	
 	public function active()

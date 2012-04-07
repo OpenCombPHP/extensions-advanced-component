@@ -1,7 +1,6 @@
 <?php 
 namespace org\opencomb\advcmpnt ;
 
-use org\opencomb\platform\system\PlatformSerializer;
 
 use org\jecat\framework\bean\BeanFactory;
 use org\opencomb\coresystem\lib\LibManager;

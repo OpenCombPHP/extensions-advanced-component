@@ -215,6 +215,13 @@ class AdvancedComponent extends Extension
 				, array()
 				, 'jquery' , true
 		) ;
+		// jquery.farbtastic
+		LibManager::singleton()->registerLibrary('jquery.farbtastic','1.2'
+				// js
+				, array('advancedcomponent:farbtastic/farbtastic.js' )
+				, array('advancedcomponent:farbtastic/farbtastic.css')
+				, 'jquery' , true
+		) ;
 	}
 	
 	public function active()

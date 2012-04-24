@@ -1,14 +1,9 @@
 <?php 
 namespace org\opencomb\advcmpnt ;
 
-
 use org\jecat\framework\bean\BeanFactory;
 use org\opencomb\coresystem\lib\LibManager;
-use org\jecat\framework\ui\xhtml\parsers\ParserStateTag;
-use org\jecat\framework\ui\CompilerManager;
-use org\opencomb\platform\ext\Extension ;
-use org\jecat\framework\ui\xhtml\UIFactory ;
-use org\jecat\framework\mvc\view\UIFactory as MvcUIFactory ;
+use org\opencomb\platform\ext\Extension;
 
 class AdvancedComponent extends Extension 
 {
@@ -228,3 +223,4 @@ class AdvancedComponent extends Extension
 	{
 	}
 }
+

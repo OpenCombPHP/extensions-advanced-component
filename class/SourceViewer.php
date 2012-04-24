@@ -2,9 +2,6 @@
 namespace org\opencomb\advcmpnt;
 
 use org\jecat\framework\util\String;
-
-use org\opencomb\platform\ext\Extension;
-use org\opencomb\platform\ext\ExtensionMetainfo;
 use org\jecat\framework\fs\Folder;
 use org\jecat\framework\message\Message;
 use org\opencomb\coresystem\auth\Id;

@@ -217,6 +217,13 @@ class AdvancedComponent extends Extension
 				, array('advancedcomponent:farbtastic/farbtastic.css')
 				, 'jquery' , true
 		) ;
+		// jquery.tip
+		LibManager::singleton()->registerLibrary('jquery.tip','1.1'
+				// js
+				, array('advancedcomponent:jquery.poshytip/jquery.poshytip.min.js')
+				, array('advancedcomponent:jquery.poshytip/tip-yellowsimple/tip-yellowsimple.css')
+				, 'jquery' , true
+		) ;
 	}
 	
 	public function active()

@@ -18,6 +18,12 @@ class AdvancedComponent extends Extension
 		
 		/////////////////////////////////////////////////////////////////////////
 		// 注册前端库
+		// jquery.toJson
+		LibManager::singleton()->registerLibrary('jquery.json','*'
+				, 'advancedcomponent:jquery.json.js'
+				, array()
+				, array('jquery'), true
+		) ;
 		
 		// jquery.ui.menu
 		LibManager::singleton()->registerLibrary('jquery.ui.menu','*'
@@ -222,6 +228,16 @@ class AdvancedComponent extends Extension
 				// js
 				, array('advancedcomponent:jquery.poshytip/jquery.poshytip.min.js')
 				, array('advancedcomponent:jquery.poshytip/tip-yellowsimple/tip-yellowsimple.css')
+				, 'jquery' , true
+		) ;
+		
+		//jquery.EasyUI
+		LibManager::singleton()->registerLibrary('easyui','1.2.6'
+				, array('advancedcomponent:jquery.esayui-1.2.6/jquery.easyui.min.js')
+				, array(
+					'advancedcomponent:jquery.esayui-1.2.6/themes/default/easyui.css',
+					'advancedcomponent:jquery.esayui-1.2.6/themes/icon.css',
+				)
 				, 'jquery' , true
 		) ;
 	}

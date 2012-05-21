@@ -43,10 +43,21 @@ class AdvancedComponent extends Extension
 		) ;
 		
 		// jquery.ztree
-		LibManager::singleton()->registerLibrary('jquery.ztree','3.1'
+// 		LibManager::singleton()->registerLibrary('jquery.ztree','3.1'
+// 				// js
+// 				, array(
+// 						'advancedcomponent:jquery.ztree/jquery.ztree.all-3.1.min.js' ,
+// 				)
+// 				// css
+// 				, array(
+// 						'advancedcomponent:jquery.ztree/css/zTreeStyle/zTreeStyle.css' ,
+// 				)
+// 				, array('jquery'), true
+// 		) ;
+		LibManager::singleton()->registerLibrary('jquery.ztree','3.2'
 				// js
 				, array(
-						'advancedcomponent:jquery.ztree/jquery.ztree.all-3.1.min.js' ,
+						'advancedcomponent:jquery.ztree/jquery.ztree.all-3.2.min.js' ,
 				)
 				// css
 				, array(

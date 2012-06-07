@@ -4,6 +4,19 @@
 	<name>advancedcomponent</name>
 	<version>0.1</version>
 	<title>高级组件</title>
+	<description>
+向蜂巢提供了一些高级的前端(HTML UI)组件库：
+ckeditor(富文本编辑器)
+farbtastic(颜色选择器)
+syntaxhighlighter(代码语法高亮)
+jQuery(1.7.1)
+jquery.esayui
+jquery.poshytip
+jquery.threedots
+jquery.treeview
+jquery.ui.menu
+jquery.ztree
+	</description>
 	
  
 	<class>org.opencomb.advcmpnt.AdvancedComponent</class>
@@ -12,5 +25,7 @@
 	<template folder="/template" />
 	
 	<publicFolder folder="/public" />
+	
+	<require type="extension" item="coresystem"><![CDATA[ >=0.1 ]]></require>
 	
 </Extension>

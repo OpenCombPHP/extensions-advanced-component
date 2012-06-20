@@ -1,11 +1,9 @@
 <?php 
 namespace org\opencomb\advcmpnt ;
 
-use org\opencomb\platform\system\PlatformSerializer;
-
 use org\jecat\framework\bean\BeanFactory;
 use org\opencomb\coresystem\lib\LibManager;
-use org\opencomb\platform\ext\Extension ;
+use org\opencomb\platform\ext\Extension;
 
 class AdvancedComponent extends Extension 
 {
@@ -20,13 +18,11 @@ class AdvancedComponent extends Extension
 		
 		/////////////////////////////////////////////////////////////////////////
 		// 注册前端库
-
-		
-		// jquery.ui
-		LibManager::singleton()->registerLibrary('jquery.ui','1.8.16'
-				, 'advancedcomponent:jquery.ui/jquery-ui-1.8.16.full.min.js'
-				, 'advancedcomponent:jquery.ui/jquery-ui-1.8.16.full.css'
-				, 'jquery', true
+		// jquery.toJson
+		LibManager::singleton()->registerLibrary('jquery.json','*'
+				, 'advancedcomponent:jquery.json.js'
+				, array()
+				, array('jquery'), true
 		) ;
 		
 		// jquery.ui.menu
@@ -53,10 +49,21 @@ class AdvancedComponent extends Extension
 		) ;
 		
 		// jquery.ztree
-		LibManager::singleton()->registerLibrary('jquery.ztree','3.1'
+// 		LibManager::singleton()->registerLibrary('jquery.ztree','3.1'
+// 				// js
+// 				, array(
+// 						'advancedcomponent:jquery.ztree/jquery.ztree.all-3.1.min.js' ,
+// 				)
+// 				// css
+// 				, array(
+// 						'advancedcomponent:jquery.ztree/css/zTreeStyle/zTreeStyle.css' ,
+// 				)
+// 				, array('jquery'), true
+// 		) ;
+		LibManager::singleton()->registerLibrary('jquery.ztree','3.2'
 				// js
 				, array(
-						'advancedcomponent:jquery.ztree/jquery.ztree.all-3.1.min.js' ,
+						'advancedcomponent:jquery.ztree/jquery.ztree.all-3.2.min.js' ,
 				)
 				// css
 				, array(
@@ -220,13 +227,34 @@ class AdvancedComponent extends Extension
 				, array()
 				, 'jquery' , true
 		) ;
+		// jquery.farbtastic
+		LibManager::singleton()->registerLibrary('jquery.farbtastic','1.2'
+				// js
+				, array('advancedcomponent:farbtastic/farbtastic.js' )
+				, array('advancedcomponent:farbtastic/farbtastic.css')
+				, 'jquery' , true
+		) ;
+		// jquery.tip
+		LibManager::singleton()->registerLibrary('jquery.tip','1.1'
+				// js
+				, array('advancedcomponent:jquery.poshytip/jquery.poshytip.min.js')
+				, array('advancedcomponent:jquery.poshytip/tip-yellowsimple/tip-yellowsimple.css')
+				, 'jquery' , true
+		) ;
 		
-		// --------------------------
-		// 提供给系统序列化
-		PlatformSerializer::singleton()->addSystemObject(LibManager::singleton()) ;
+		//jquery.EasyUI
+		LibManager::singleton()->registerLibrary('easyui','1.2.6'
+				, array('advancedcomponent:jquery.esayui-1.2.6/jquery.easyui.min.js')
+				, array(
+					'advancedcomponent:jquery.esayui-1.2.6/themes/default/easyui.css',
+					'advancedcomponent:jquery.esayui-1.2.6/themes/icon.css',
+				)
+				, 'jquery' , true
+		) ;
 	}
 	
 	public function active()
 	{
 	}
 }
+

@@ -2,10 +2,7 @@
 namespace org\opencomb\advcmpnt;
 
 use org\jecat\framework\util\String;
-
-use org\opencomb\platform\ext\Extension;
-use org\opencomb\platform\ext\ExtensionMetainfo;
-use org\jecat\framework\fs\FileSystem;
+use org\jecat\framework\fs\Folder;
 use org\jecat\framework\message\Message;
 use org\opencomb\coresystem\auth\Id;
 use org\opencomb\doccenter\frame\DocFrontController;
@@ -56,7 +53,7 @@ class SourceViewer extends DocFrontController {
 			$this->viewViewer->variables ()->set ( 'sLines', implode(',', $arrLinesString) );
 		}
 		$sClassPath = $this->params->get('path'); 
-		$aSourceFile = FileSystem::singleton()->findFile($sClassPath);
+		$aSourceFile = Folder::singleton()->findFile($sClassPath);
 		/**
 		 * @example /文件/文件内容读取
 		 * @forwiki /文件/文件内容读取
@@ -64,7 +61,7 @@ class SourceViewer extends DocFrontController {
 		if($aSourceFile->exists()){
 			//新建一个string对象,这里不能使用原生string
 			$sSource= new String();
-			//$aSourceFile是一个实现IFile接口的对象,openReader方法打开文件数据流,readInString方法把文件内容读出,并把读出的内容填入刚刚建立的string对象$sSource
+			//$aSourceFile是一个实现File接口的对象,openReader方法打开文件数据流,readInString方法把文件内容读出,并把读出的内容填入刚刚建立的string对象$sSource
 			$aSourceFile->openReader()->readInString($sSource);
 			$this->viewViewer->variables ()->set ( 'sClassPath', $sClassPath );
 			$this->viewViewer->variables ()->set ( 'sSource', $sSource );

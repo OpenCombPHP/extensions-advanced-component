@@ -2,7 +2,7 @@
 <Extension>
 
 	<name>advancedcomponent</name>
-	<version>0.1</version>
+	<version>0.2</version>
 	<title>高级组件</title>
 	<description>
 向蜂巢提供了一些高级的前端(HTML UI)组件库：

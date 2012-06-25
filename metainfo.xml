@@ -26,6 +26,10 @@ jquery.ztree
 	
 	<publicFolder folder="/public" />
 	
-	<require type="extension" item="coresystem"><![CDATA[ >=0.1 ]]></require>
+	<!-- 依赖蜂巢系统-->
+	<require type="framework"><![CDATA[ =0.7.2 ]]></require>
+	<require type="platform"><![CDATA[ =0.3.2 ]]></require>
+	
+	<require type="extension" item="coresystem"><![CDATA[ =0.1 ]]></require>
 	
 </Extension>
